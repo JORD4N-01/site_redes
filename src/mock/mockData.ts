@@ -1,5 +1,4 @@
 import packetTracerImg from '../assets/softwares/packet-tracer.svg'
-import zabbixImg from '../assets/softwares/zabbix.svg'
 import windowsServerImg from '../assets/softwares/windows-server.svg'
 import modeling3dImg from '../assets/softwares/fusion-3d.svg'
 import ubuntuImg from '../assets/softwares/ubuntu.svg'
@@ -43,6 +42,7 @@ export interface Floor {
 }
 
 export interface Inventory {
+  servers: number
   pcs: number
   notebooks: number
   switches: number
@@ -56,6 +56,7 @@ export interface ProjectData {
     name: string
     summary: string
   }
+  description: string[]
   sectors: Sector[]
   floors: Floor[]
   inventory: Inventory
@@ -132,13 +133,6 @@ export const mockData: SiteData = {
           'Simulação e validação lógica da topologia (endereçamento, VLANs, roteamento e testes).',
       },
       {
-        id: 'zabbix',
-        name: 'Zabbix',
-        imageSrc: zabbixImg,
-        why:
-          'Exemplo de ferramenta para monitoramento (disponibilidade, métricas, alertas e histórico).',
-      },
-      {
         id: 'ubuntu',
         name: 'Linux Ubuntu',
         imageSrc: ubuntuImg,
@@ -170,57 +164,75 @@ export const mockData: SiteData = {
   },
   project: {
     fictitiousInstitution: {
-      name: 'Instituição Fictícia: Rede NorteTech',
+      name: 'Banco Raiz do Norte',
       summary:
-        'Empresa fictícia de médio porte com três andares, setores administrativos e técnicos, sala de servidores e pontos de rede distribuídos para usuários, impressoras e telefonia VoIP.',
+        'Banco fictício dividido em 7 setores distribuídos em dois andares, com segmentação por VLANs, VoIP e monitoramento via SNMP.',
     },
+    description: [
+      'A agência bancária é estruturada em sete setores distribuídos em dois andares. No 1º andar estão os setores de Atendimento, Atendimento-2 e Sala de TI; no 2º andar, Sala do Gerente, Atendimento VIP, Sala de Reunião e Sala de TI-2.',
+      'A rede é segmentada logicamente por meio de VLANs, garantindo isolamento entre os departamentos, maior segurança da informação e melhor desempenho da infraestrutura.',
+      'O ambiente conta com aproximadamente 49 ativos de rede, incluindo servidores, computadores, roteadores, switches, notebooks, impressoras e telefones VoIP. Também foi implementado cabeamento estruturado, assegurando organização, escalabilidade, confiabilidade e redução de custos operacionais.',
+      'A adoção de VoIP reduziu significativamente os custos com comunicação interna, substituindo linhas telefônicas convencionais. Além disso, o uso de SNMP em plataforma livre permite monitoramento em tempo real, facilitando a detecção de falhas e aumentando a eficiência e estabilidade da rede. A solução proposta é escalável e atende tanto às demandas atuais quanto futuras, promovendo eficiência operacional, economia e sustentabilidade.',
+    ],
     sectors: [
       {
-        name: 'Recepção',
-        description: 'Atendimento inicial, cadastro e triagem.',
+        name: 'Atendimento',
+        description:
+          'Responsável pelo atendimento direto ao cliente, realizando operações bancárias e suporte inicial.',
       },
       {
-        name: 'Administração',
-        description: 'Financeiro, RH e diretoria.',
+        name: 'Atendimento-2',
+        description:
+          'Setor de apoio ao atendimento principal, auxiliando na demanda operacional e na continuidade dos serviços.',
       },
       {
-        name: 'Laboratório de Informática',
-        description: 'Ambiente de treinamento e apoio técnico.',
+        name: 'Sala de TI',
+        description:
+          'Responsável pela administração da infraestrutura de rede, suporte técnico, monitoramento e segurança dos sistemas.',
       },
       {
-        name: 'Sala de Servidores (CPD)',
-        description: 'Rack, switches, roteadores e servidores.',
+        name: 'Sala do Gerente',
+        description:
+          'Ambiente destinado à gestão administrativa, supervisão das operações e tomada de decisões estratégicas.',
       },
       {
-        name: 'Suporte / TI',
-        description: 'Equipe técnica, manutenção e monitoramento.',
+        name: 'Atendimento VIP',
+        description:
+          'Setor dedicado ao atendimento personalizado e prioritário de clientes, com maior nível de confidencialidade e qualidade de serviço.',
+      },
+      {
+        name: 'Sala de Reunião',
+        description:
+          'Espaço destinado a reuniões internas, alinhamentos estratégicos e atividades colaborativas.',
+      },
+      {
+        name: 'Sala de TI-2',
+        description:
+          'Área de apoio técnico, utilizada para expansão da infraestrutura, pontos adicionais de rede e suporte operacional.',
       },
     ],
     floors: [
       {
         name: '1º Andar',
-        sectors: ['Recepção', 'Administração'],
+        sectors: ['Atendimento', 'Atendimento-2', 'Sala de TI'],
       },
       {
         name: '2º Andar',
-        sectors: ['Laboratório de Informática'],
-      },
-      {
-        name: '3º Andar',
-        sectors: ['Suporte / TI', 'Sala de Servidores (CPD)'],
+        sectors: ['Sala do Gerente', 'Atendimento VIP', 'Sala de Reunião', 'Sala de TI-2'],
       },
     ],
     inventory: {
-      pcs: 48,
-      notebooks: 12,
+      servers: 2,
+      pcs: 20,
+      notebooks: 6,
       switches: 6,
       routers: 2,
-      printers: 6,
-      voipPhones: 18,
+      printers: 5,
+      voipPhones: 8,
     },
     cabling: {
       structuredCablingDescription:
-        'O projeto considera cabeamento estruturado com backbone e distribuição horizontal, patch panels no rack do CPD, e tomadas de telecomunicações por ponto de trabalho. O objetivo é manter organização, facilitar expansão/manutenção e reduzir indisponibilidades.',
+        'Houve a implementação de cabeamento estruturado, proporcionando maior produtividade, segurança, conectividade, confiança, escalabilidade e redução de custos.',
       standardsNotes: [
         'Separação lógica por VLANs (usuários, voz, servidores, gerenciamento).',
         'Identificação de cabos e portas (etiquetagem) para rastreabilidade.',
@@ -234,10 +246,10 @@ export const mockData: SiteData = {
   },
   service: {
     title: 'Serviço de Monitoramento',
-    softwareName: 'Zabbix',
-    softwareImageSrc: zabbixImg,
+    softwareName: 'Monitoramento SNMP (exemplo)',
+    softwareImageSrc: ubuntuImg,
     description:
-      'Como exemplo, utilizamos o Zabbix para demonstrar como seria feito o monitoramento da rede (hosts, serviços e links), com geração de alertas e histórico de métricas para apoiar decisões e manutenção preventiva.',
+      'Exemplo de serviço para demonstrar o monitoramento da rede (hosts, serviços e links) via SNMP, com alertas e histórico de métricas para apoiar decisões e manutenção preventiva.',
     keyFeatures: [
       'Coleta de métricas (CPU, RAM, disco, interfaces e disponibilidade).',
       'Alertas por limiar e notificações por evento.',
