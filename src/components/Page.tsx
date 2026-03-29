@@ -1,7 +1,15 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-export default function Page({ title, children }: { title: string; children: ReactNode }) {
+export default function Page({
+  title,
+  children,
+  centerTitle = false,
+}: {
+  title: string
+  children: ReactNode
+  centerTitle?: boolean
+}) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 12 }}
@@ -10,7 +18,7 @@ export default function Page({ title, children }: { title: string; children: Rea
       transition={{ duration: 0.2 }}
       className="space-y-6"
     >
-      <header className="space-y-2">
+      <header className={`space-y-2 ${centerTitle ? 'text-center' : ''}`}>
         <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {title}
         </h1>

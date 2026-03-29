@@ -13,6 +13,7 @@ import avatar05 from '../assets/people/avatar-05.svg'
 import avatar06 from '../assets/people/avatar-06.svg'
 
 import logicalDiagramImg from '../assets/project/planta-logica-packettracer.svg'
+import projectHeroImg from '../assets/project/hero-projeto.svg'
 
 export type CollaboratorRole = 'Aluno' | 'Professor'
 
@@ -75,6 +76,10 @@ export interface SiteData {
     course: string
     fairNote: string
   }
+  home: {
+    projectHeroImageSrc: string
+    projectHeroAlt: string
+  }
   about: {
     projectName: string
     summary: string
@@ -102,6 +107,10 @@ export const mockData: SiteData = {
     course: 'Curso Técnico em Redes de Computadores',
     fairNote:
       'Projeto desenvolvido com participação e apresentação na Feira em Brasília.',
+  },
+  home: {
+    projectHeroImageSrc: projectHeroImg,
+    projectHeroAlt: 'Imagem representativa do projeto (mock)',
   },
   about: {
     projectName: 'Infraestrutura, Cabeamento e Monitoramento de Rede (Fictício)',

@@ -8,8 +8,15 @@ export default function Navbar() {
   return (
     <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
-        <NavLink to="/" className="text-base font-semibold text-white">
-          {mockData.institution.name}
+        <NavLink to="/" className="group">
+          <div className="flex flex-col leading-tight">
+            <span className="text-base font-semibold text-white group-hover:text-white">
+              {mockData.institution.name}
+            </span>
+            <span className="mt-0.5 text-xs font-medium text-slate-400 group-hover:text-slate-300">
+              Governo do estado no Amazonas
+            </span>
+          </div>
         </NavLink>
 
         <nav className="flex flex-wrap items-center gap-1">
