@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Planta lógica (Packet Tracer) - placeholder">
+  <rect width="1200" height="675" fill="#f1f5f9"/>
+  <rect x="40" y="40" width="1120" height="595" rx="28" fill="#ffffff"/>
+
+  <text x="600" y="120" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="34" fill="#0f172a">Planta lógica (Cisco Packet Tracer)</text>
+  <text x="600" y="160" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="16" fill="#334155">placeholder para inserir o diagrama real</text>
+
+  <g stroke="#94a3b8" stroke-width="3" fill="none">
+    <rect x="120" y="240" width="220" height="90" rx="12"/>
+    <rect x="490" y="240" width="220" height="90" rx="12"/>
+    <rect x="860" y="240" width="220" height="90" rx="12"/>
+
+    <rect x="305" y="420" width="240" height="90" rx="12"/>
+    <rect x="655" y="420" width="240" height="90" rx="12"/>
+
+    <path d="M340 285h150"/>
+    <path d="M710 285h150"/>
+    <path d="M600 330v90"/>
+    <path d="M600 420h55"/>
+  </g>
+
+  <g fill="#0f172a" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="16">
+    <text x="230" y="293" text-anchor="middle">Roteador</text>
+    <text x="600" y="293" text-anchor="middle">Switch Core</text>
+    <text x="970" y="293" text-anchor="middle">Firewall</text>
+    <text x="425" y="473" text-anchor="middle">Switch Acesso</text>
+    <text x="775" y="473" text-anchor="middle">Servidores</text>
+  </g>
+</svg>
