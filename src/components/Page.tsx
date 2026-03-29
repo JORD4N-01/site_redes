@@ -11,7 +11,7 @@ export default function Page({ title, children }: { title: string; children: Rea
       className="space-y-6"
     >
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {title}
         </h1>
       </header>

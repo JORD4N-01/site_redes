@@ -2,13 +2,13 @@ import { NavLink } from 'react-router-dom'
 import { mockData } from '../mock/mockData'
 
 const linkBase =
-  'rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200 hover:text-slate-900'
+  'rounded-md px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60'
 
 export default function Navbar() {
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
-        <NavLink to="/" className="text-base font-semibold text-slate-900">
+        <NavLink to="/" className="text-base font-semibold text-white">
           {mockData.institution.name}
         </NavLink>
 
@@ -17,7 +17,7 @@ export default function Navbar() {
             to="/"
             end
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-200 text-slate-900' : ''}`
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Home
@@ -25,7 +25,7 @@ export default function Navbar() {
           <NavLink
             to="/sobre"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-200 text-slate-900' : ''}`
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Sobre
@@ -33,7 +33,7 @@ export default function Navbar() {
           <NavLink
             to="/projeto"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-200 text-slate-900' : ''}`
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Projeto
@@ -41,7 +41,7 @@ export default function Navbar() {
           <NavLink
             to="/servico"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-200 text-slate-900' : ''}`
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Serviço
@@ -49,7 +49,7 @@ export default function Navbar() {
           <NavLink
             to="/colaboradores"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-200 text-slate-900' : ''}`
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Colaboradores
