@@ -1,8 +1,9 @@
 import packetTracerImg from '../assets/softwares/packet-tracer.svg'
 import zabbixImg from '../assets/softwares/zabbix.svg'
-import drawioImg from '../assets/softwares/drawio.svg'
 import windowsServerImg from '../assets/softwares/windows-server.svg'
 import modeling3dImg from '../assets/softwares/fusion-3d.svg'
+import ubuntuImg from '../assets/softwares/ubuntu.svg'
+import asteriskImg from '../assets/softwares/asterisk.svg'
 
 import groupPhotoImg from '../assets/people/grupo.svg'
 import avatar01 from '../assets/people/avatar-01.svg'
@@ -83,6 +84,7 @@ export interface SiteData {
   about: {
     projectName: string
     summary: string
+    details: string[]
     technologies: Technology[]
   }
   project: ProjectData
@@ -113,9 +115,14 @@ export const mockData: SiteData = {
     projectHeroAlt: 'Imagem representativa do projeto (mock)',
   },
   about: {
-    projectName: 'Infraestrutura, Cabeamento e Monitoramento de Rede (Fictício)',
+    projectName:
+      'Inovação em Redes: VoIP, Linux e SNMP para um futuro Sustentável',
     summary:
-      'Este site apresenta o projeto prático da turma de Redes 2025: planejamento de uma rede corporativa fictícia, incluindo organização por setores/andares, cabeamento estruturado e uma proposta de monitoramento para garantir disponibilidade e desempenho.',
+      'Projeto desenvolvido por estudantes do CETAM (Centro de Educação Tecnológica do Amazonas), com foco na implementação de uma infraestrutura de rede corporativa eficiente, segura e gerenciável. A proposta busca integrar sistemas e otimizar a comunicação interna, demonstrando a aplicação prática de conhecimentos técnicos em um cenário realista do ambiente empresarial.',
+    details: [
+      'O principal objetivo é criar uma rede estruturada para uma agência bancária, garantindo conectividade estável, alto desempenho e proteção de dados sensíveis. Além disso, o projeto contempla a integração de comunicação por VoIP, facilitando a troca de informações entre os setores.',
+      'A solução foi planejada para atender às necessidades específicas de cada área da organização, proporcionando uma experiência prática completa em gestão, monitoramento e segurança de redes corporativas, além de reforçar boas práticas de infraestrutura e governança de TI.',
+    ],
     technologies: [
       {
         id: 'packet-tracer',
@@ -125,18 +132,25 @@ export const mockData: SiteData = {
           'Simulação e validação lógica da topologia (endereçamento, VLANs, roteamento e testes).',
       },
       {
-        id: 'drawio',
-        name: 'diagrams.net (draw.io)',
-        imageSrc: drawioImg,
-        why:
-          'Documentação do projeto e criação de diagramas de rede/fluxos de forma rápida e padronizada.',
-      },
-      {
         id: 'zabbix',
         name: 'Zabbix',
         imageSrc: zabbixImg,
         why:
           'Exemplo de ferramenta para monitoramento (disponibilidade, métricas, alertas e histórico).',
+      },
+      {
+        id: 'ubuntu',
+        name: 'Linux Ubuntu',
+        imageSrc: ubuntuImg,
+        why:
+          'Sistema operacional usado como base para hospedar serviços do projeto, incluindo o Asterisk (VoIP) e o firewall.',
+      },
+      {
+        id: 'asterisk',
+        name: 'Asterisk (VoIP)',
+        imageSrc: asteriskImg,
+        why:
+          'Software de VoIP utilizado para integrar a comunicação interna, com foco em telefonia IP e ramais por setor.',
       },
       {
         id: 'windows-server',

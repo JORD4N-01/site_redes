@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <Page title="Transformando Ideias em Realidade Tecnológica !" centerTitle>
       <section className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-        <div className="p-2 md:p-3">
-          <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-3 text-center md:p-4">
+        <div className="p-3 md:p-4">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-4 text-center md:p-5">
             <h2 className="text-xl font-semibold text-white sm:text-2xl">
               Conheça Nosso Projeto em Destaque
             </h2>
@@ -15,11 +15,11 @@ export default function Home() {
               Conheça as soluções tecnológicas criadas e desenvolvidas por alunos do CETAM/IBC, unindo inovação e prática.
             </p>
 
-            <div className="mx-auto mt-3 aspect-video w-full max-w-3xl overflow-hidden rounded-xl bg-slate-950/40">
+            <div className="mx-auto mt-4 h-40 w-full max-w-4xl overflow-hidden rounded-xl border border-slate-800 bg-slate-950/40 sm:h-48 md:h-52">
               <img
                 src={mockData.home.projectHeroImageSrc}
                 alt={mockData.home.projectHeroAlt}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain p-2"
                 loading="lazy"
               />
             </div>
@@ -28,7 +28,7 @@ export default function Home() {
               to="/sobre"
               className="mt-3 inline-block text-sm font-semibold text-white underline decoration-sky-500/60 underline-offset-4 hover:decoration-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60 sm:text-base"
             >
-              Inovação em Redes: VoIP, Linux e SNMP para um futuro Sustentável
+              {mockData.about.projectName}
             </Link>
 
             <p className="mt-2 text-[10px] text-slate-400">
@@ -36,27 +36,6 @@ export default function Home() {
               <span className="font-medium text-sky-300">src/mock/mockData.ts</span>
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5">
-          <h3 className="text-base font-semibold text-white">Sobre</h3>
-          <p className="mt-2 text-sm text-slate-300">
-            Nome do projeto, resumo e tecnologias utilizadas.
-          </p>
-        </div>
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5">
-          <h3 className="text-base font-semibold text-white">Projeto</h3>
-          <p className="mt-2 text-sm text-slate-300">
-            Instituição fictícia, setores/andares, inventário e cabeamento estruturado.
-          </p>
-        </div>
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5">
-          <h3 className="text-base font-semibold text-white">Serviço</h3>
-          <p className="mt-2 text-sm text-slate-300">
-            Exemplo de monitoramento de rede com {mockData.service.softwareName}.
-          </p>
         </div>
       </section>
     </Page>
