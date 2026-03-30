@@ -6,7 +6,7 @@ export default function Feira() {
   const { fair } = mockData
 
   return (
-    <Page title="Feira">
+    <Page title="Feira Nacional de Inovação">
       <section className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
         <p className="text-sm font-medium text-slate-400">{fair.location}</p>
         <h2 className="mt-2 text-2xl font-semibold text-white">{fair.title}</h2>

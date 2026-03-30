@@ -132,12 +132,11 @@ export const mockData: SiteData = {
   },
   fair: {
     title: '5ª Semana Nacional da Educação Profissional e Tecnológica: “Juventudes que Inovam, Brasil que Avança”',
-    location: 'Brasília - DF',
+    location: 'Brasília/DF',
     intro:
-      'Esta página registra, em formato de mock, a experiência de apresentar o projeto durante a 5ª Feira de Inovação e Tecnologia em Brasília. Aqui você pode inserir fotos do estande, da apresentação e do time.',
+      '5ª edição da Semana Nacional da Educação Profissional e Tecnológica - Juventudes que inovam, Brasil que avança, ocorreu no período de 7 a 9 de outubro, na Arena BRB Mané Garrincha, em Brasília/DF.',
     paragraphs: [
-      'A participação na feira foi uma oportunidade para demonstrar, na prática, as escolhas técnicas do projeto — incluindo segmentação por VLANs, comunicação por VoIP e monitoramento — e explicar como cada parte contribui para segurança, desempenho e organização da infraestrutura.',
-      'Durante a apresentação, também foi possível receber feedbacks, trocar experiências com outros participantes e reforçar a importância de projetos aplicados para consolidar o aprendizado.',
+      'O evento gratuito busca contribuir para a divulgação da Educação Profissional e Tecnológica (EPT) no país, ampliando o reconhecimento social da modalidade e mostrando o crescimento da EPT por meio da integração de estudantes e profissionais, compartilhamento de projetos e pesquisas desenvolvidas pelas instituições ofertantes.',
     ],
     images: [
       {
