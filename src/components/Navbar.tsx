@@ -54,20 +54,20 @@ export default function Navbar() {
             Serviço
           </NavLink>
           <NavLink
-            to="/colaboradores"
-            className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
-            }
-          >
-            Colaboradores
-          </NavLink>
-          <NavLink
             to="/feira"
             className={({ isActive }) =>
               `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
             }
           >
             Feira
+          </NavLink>
+          <NavLink
+            to="/colaboradores"
+            className={({ isActive }) =>
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
+            }
+          >
+            Colaboradores
           </NavLink>
         </nav>
       </div>

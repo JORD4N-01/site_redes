@@ -46,19 +46,12 @@ export default function Colaboradores() {
         </div>
       </section>
 
-      <div className="flex items-center justify-between gap-3">
-        <Link
-          to="/servico"
-          className="inline-flex items-center justify-center rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-2 text-sm font-semibold text-white hover:border-slate-700 hover:bg-slate-950/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
-        >
-          Voltar
-        </Link>
-
+      <div className="flex items-center justify-start">
         <Link
           to="/feira"
           className="inline-flex items-center justify-center rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-2 text-sm font-semibold text-white hover:border-slate-700 hover:bg-slate-950/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
         >
-          Avançar
+          Voltar
         </Link>
       </div>
     </Page>

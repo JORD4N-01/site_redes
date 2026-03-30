@@ -131,7 +131,7 @@ export const mockData: SiteData = {
     projectHeroAlt: 'Imagem representativa do projeto (mock)',
   },
   fair: {
-    title: '5ª Feira de Inovação e Tecnologia',
+    title: '5ª Semana Nacional da Educação Profissional e Tecnológica: “Juventudes que Inovam, Brasil que Avança”',
     location: 'Brasília - DF',
     intro:
       'Esta página registra, em formato de mock, a experiência de apresentar o projeto durante a 5ª Feira de Inovação e Tecnologia em Brasília. Aqui você pode inserir fotos do estande, da apresentação e do time.',
