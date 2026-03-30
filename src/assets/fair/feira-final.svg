@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Feira de Inovação - Foto Final (placeholder)">
+  <rect width="1200" height="675" fill="#e2e8f0"/>
+  <rect x="40" y="40" width="1120" height="595" rx="28" fill="#ffffff"/>
+  <text x="600" y="330" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="44" fill="#0f172a">Foto Final (mock)</text>
+  <text x="600" y="390" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="18" fill="#334155">Use este espaço para a imagem maior no final</text>
+</svg>

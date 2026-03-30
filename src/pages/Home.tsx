@@ -15,11 +15,11 @@ export default function Home() {
               Conheça as soluções tecnológicas criadas e desenvolvidas por alunos do CETAM/IBC, unindo inovação e prática.
             </p>
 
-            <div className="mx-auto mt-4 h-40 w-full max-w-4xl overflow-hidden rounded-xl border border-slate-800 bg-slate-950/40 sm:h-48 md:h-52">
+            <div className="mx-auto mt-4 h-40 w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950/40 sm:h-48 md:h-52">
               <img
                 src={mockData.home.projectHeroImageSrc}
                 alt={mockData.home.projectHeroAlt}
-                className="h-full w-full object-contain p-2"
+                className="h-full w-full object-contain p-1 sm:p-2"
                 loading="lazy"
               />
             </div>

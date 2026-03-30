@@ -61,6 +61,14 @@ export default function Navbar() {
           >
             Colaboradores
           </NavLink>
+          <NavLink
+            to="/feira"
+            className={({ isActive }) =>
+              `${linkBase} ${isActive ? 'bg-slate-800/80 text-white' : ''}`
+            }
+          >
+            Feira
+          </NavLink>
         </nav>
       </div>
     </header>

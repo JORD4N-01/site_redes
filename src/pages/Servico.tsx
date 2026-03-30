@@ -33,12 +33,19 @@ export default function Servico() {
         </div>
       </section>
 
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between gap-3">
+        <Link
+          to="/projeto"
+          className="inline-flex items-center justify-center rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-2 text-sm font-semibold text-white hover:border-slate-700 hover:bg-slate-950/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+        >
+          Voltar
+        </Link>
+
         <Link
           to="/colaboradores"
           className="inline-flex items-center justify-center rounded-xl border border-slate-800 bg-slate-950/40 px-4 py-2 text-sm font-semibold text-white hover:border-slate-700 hover:bg-slate-950/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
         >
-          Próxima parte do projeto
+          Avançar
         </Link>
       </div>
     </Page>

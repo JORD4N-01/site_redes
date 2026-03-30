@@ -1,4 +1,5 @@
 import packetTracerImg from '../assets/softwares/packet-tracer.svg'
+import zabbixImg from '../assets/softwares/zabbix.svg'
 import windowsServerImg from '../assets/softwares/windows-server.svg'
 import modeling3dImg from '../assets/softwares/fusion-3d.svg'
 import ubuntuImg from '../assets/softwares/ubuntu.svg'
@@ -15,12 +16,18 @@ import avatar06 from '../assets/people/avatar-06.svg'
 import logicalDiagramImg from '../assets/project/planta-logica-packettracer.svg'
 import projectHeroImg from '../assets/project/hero-projeto.svg'
 
-export type CollaboratorRole = 'Aluno' | 'Professor'
+import fairImg01 from '../assets/fair/feira-01.svg'
+import fairImg02 from '../assets/fair/feira-02.svg'
+import fairImg03 from '../assets/fair/feira-03.svg'
+import fairImgFinal from '../assets/fair/feira-final.svg'
+
+export type CollaboratorRole = 'Aluno' | 'Professor' | 'Instrutor' | 'Instrutora'
 
 export interface Collaborator {
   id: string
   name: string
   role: CollaboratorRole
+  description: string
   photoSrc: string
 }
 
@@ -82,6 +89,14 @@ export interface SiteData {
     projectHeroImageSrc: string
     projectHeroAlt: string
   }
+  fair: {
+    title: string
+    location: string
+    intro: string
+    paragraphs: string[]
+    images: Array<{ id: string; src: string; alt: string }>
+    thanksText: string
+  }
   about: {
     projectName: string
     summary: string
@@ -114,6 +129,40 @@ export const mockData: SiteData = {
   home: {
     projectHeroImageSrc: projectHeroImg,
     projectHeroAlt: 'Imagem representativa do projeto (mock)',
+  },
+  fair: {
+    title: '5ª Feira de Inovação e Tecnologia',
+    location: 'Brasília - DF',
+    intro:
+      'Esta página registra, em formato de mock, a experiência de apresentar o projeto durante a 5ª Feira de Inovação e Tecnologia em Brasília. Aqui você pode inserir fotos do estande, da apresentação e do time.',
+    paragraphs: [
+      'A participação na feira foi uma oportunidade para demonstrar, na prática, as escolhas técnicas do projeto — incluindo segmentação por VLANs, comunicação por VoIP e monitoramento — e explicar como cada parte contribui para segurança, desempenho e organização da infraestrutura.',
+      'Durante a apresentação, também foi possível receber feedbacks, trocar experiências com outros participantes e reforçar a importância de projetos aplicados para consolidar o aprendizado.',
+    ],
+    images: [
+      {
+        id: 'feira-01',
+        src: fairImg01,
+        alt: 'Foto 01 da feira (mock)',
+      },
+      {
+        id: 'feira-02',
+        src: fairImg02,
+        alt: 'Foto 02 da feira (mock)',
+      },
+      {
+        id: 'feira-03',
+        src: fairImg03,
+        alt: 'Foto 03 da feira (mock)',
+      },
+      {
+        id: 'feira-final',
+        src: fairImgFinal,
+        alt: 'Foto final (maior) com agradecimentos (mock)',
+      },
+    ],
+    thanksText:
+      'Agradecimentos especiais ao CETAM, aos professores e a todos os colegas de equipe pelo apoio, orientação e colaboração. Este projeto é resultado de esforço conjunto, aprendizado contínuo e dedicação para representar a turma com excelência.',
   },
   about: {
     projectName:
@@ -246,10 +295,10 @@ export const mockData: SiteData = {
   },
   service: {
     title: 'Serviço de Monitoramento',
-    softwareName: 'Monitoramento SNMP (exemplo)',
-    softwareImageSrc: ubuntuImg,
+    softwareName: 'Zabbix',
+    softwareImageSrc: zabbixImg,
     description:
-      'Exemplo de serviço para demonstrar o monitoramento da rede (hosts, serviços e links) via SNMP, com alertas e histórico de métricas para apoiar decisões e manutenção preventiva.',
+      'Como exemplo, utilizamos o Zabbix para demonstrar como seria feito o monitoramento da rede (hosts, serviços e links), com geração de alertas e histórico de métricas para apoiar decisões e manutenção preventiva.',
     keyFeatures: [
       'Coleta de métricas (CPU, RAM, disco, interfaces e disponibilidade).',
       'Alertas por limiar e notificações por evento.',
@@ -260,12 +309,55 @@ export const mockData: SiteData = {
   collaborators: {
     groupPhotoSrc: groupPhotoImg,
     people: [
-      { id: 'p1', name: 'Aluno(a) 01', role: 'Aluno', photoSrc: avatar01 },
-      { id: 'p2', name: 'Aluno(a) 02', role: 'Aluno', photoSrc: avatar02 },
-      { id: 'p3', name: 'Aluno(a) 03', role: 'Aluno', photoSrc: avatar03 },
-      { id: 'p4', name: 'Aluno(a) 04', role: 'Aluno', photoSrc: avatar04 },
-      { id: 't1', name: 'Professor(a) 01', role: 'Professor', photoSrc: avatar05 },
-      { id: 't2', name: 'Professor(a) 02', role: 'Professor', photoSrc: avatar06 },
+      {
+        id: 'i1',
+        name: 'Kallel Python',
+        role: 'Instrutor',
+        description: 'Teaching Specialist - T.I',
+        photoSrc: avatar05,
+      },
+      {
+        id: 'i2',
+        name: 'Jamillis Silva',
+        role: 'Instrutora',
+        description: 'Apoio Pedagógico',
+        photoSrc: avatar06,
+      },
+      {
+        id: 'a1',
+        name: 'Jordan Cunha',
+        role: 'Aluno',
+        description: 'Tec. em Redes de Computadores',
+        photoSrc: avatar01,
+      },
+      {
+        id: 'a2',
+        name: 'Saulo Vinicius',
+        role: 'Aluno',
+        description: 'Tec. em Redes de Computadores',
+        photoSrc: avatar02,
+      },
+      {
+        id: 'a3',
+        name: 'Manoel Medeiros',
+        role: 'Aluno',
+        description: 'Tec. em Redes de Computadores',
+        photoSrc: avatar03,
+      },
+      {
+        id: 'a4',
+        name: 'Thamirys Ribeiro',
+        role: 'Aluno',
+        description: 'Tec. em Redes de Computadores',
+        photoSrc: avatar04,
+      },
+      {
+        id: 'a5',
+        name: 'Carlos Alberto',
+        role: 'Aluno',
+        description: 'Tec. em Redes de Computadores',
+        photoSrc: avatar01,
+      },
     ],
   },
 }
