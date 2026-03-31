@@ -1,7 +1,7 @@
 import Page from '../components/Page'
 import { Link } from 'react-router-dom'
 
-import groupPhotoSrc from '../assets/people/grupo.svg'
+import groupPhotoFallbackSrc from '../assets/people/grupo.svg'
 import instructorPhotoSrc from '../assets/people/Instrutor.png'
 import jamillisPhotoSrc from '../assets/people/foto_jamillis.jpeg'
 import jordanPhotoSrc from '../assets/people/jordan.jpeg'
@@ -9,6 +9,8 @@ import sauloPhotoSrc from '../assets/people/foto_sualo.jpeg'
 import manuPhotoSrc from '../assets/people/manu.jpeg'
 import thamyresPhotoSrc from '../assets/people/foto_Thamyres.jpeg'
 import carlosPhotoSrc from '../assets/people/foto_carlos.jpeg'
+
+const groupPhotoSrc = '/people/foto-turma-com-prof.jpg'
 
 type CollaboratorRole = 'Aluno' | 'Professor' | 'Instrutor' | 'Instrutora'
 
@@ -85,27 +87,35 @@ export default function Colaboradores() {
         </p>
         <img
           src={collaborators.groupPhotoSrc}
-          alt="Foto em conjunto"
+          alt="Foto turma com prof"
           className="mt-4 h-auto w-full rounded-xl border border-slate-800 bg-slate-950/40 object-cover"
+          onError={(event) => {
+            event.currentTarget.onerror = null
+            event.currentTarget.src = groupPhotoFallbackSrc
+          }}
           loading="lazy"
         />
       </section>
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold text-white">Equipe</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {collaborators.people.map((person) => (
             <article
               key={person.id}
-              className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900"
+              className="w-full max-w-xs overflow-hidden rounded-2xl border border-slate-800 bg-slate-900"
             >
-              <img
-                src={person.photoSrc}
-                alt={person.name}
-                className="h-40 w-full bg-slate-950/40 object-cover"
-                loading="lazy"
-              />
-              <div className="p-5">
+              <div className="flex justify-center p-7 pb-0">
+                <div className="h-40 w-40 overflow-hidden rounded-full border border-slate-800 bg-slate-950/40">
+                  <img
+                    src={person.photoSrc}
+                    alt={person.name}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="p-7 pt-5">
                 <p className="text-sm font-medium text-slate-400">{person.role}</p>
                 <h3 className="mt-1 text-base font-semibold text-white">
                   {person.name}
