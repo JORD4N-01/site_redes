@@ -1,3 +1,4 @@
+
 import Page from '../components/Page'
 import { mockData } from '../mock/mockData'
 import { Link } from 'react-router-dom'
@@ -6,8 +7,8 @@ export default function Home() {
   return (
     <Page title="Transformando Ideias em Realidade Tecnológica !" centerTitle>
       <section className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-        <div className="p-3 md:p-4">
-          <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-4 text-center md:p-5">
+        <div className="p-5 md:p-7">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950/40 p-6 text-center md:p-8">
             <h2 className="text-xl font-semibold text-white sm:text-2xl">
               Conheça Nosso Projeto em Destaque
             </h2>
@@ -15,7 +16,7 @@ export default function Home() {
               Conheça as soluções tecnológicas criadas e desenvolvidas por alunos do CETAM/IBC, unindo inovação e prática.
             </p>
 
-            <div className="mx-auto mt-4 h-40 w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950/40 sm:h-48 md:h-52">
+            <div className="mx-auto mt-6 h-64 w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950/40 sm:h-72 md:h-80 lg:h-96">
               <img
                 src={mockData.home.projectHeroImageSrc}
                 alt={mockData.home.projectHeroAlt}

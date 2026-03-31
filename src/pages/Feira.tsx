@@ -42,6 +42,11 @@ export default function Feira() {
         <h3 className="text-lg font-semibold text-white">Agradecimentos</h3>
         <p className="mt-3 text-justify text-slate-300">{fair.thanksText}</p>
 
+        <p className="mt-3 text-justify text-slate-300">
+          Agradecimentos especiais ao Professor Kallel Python e à Pedagoga Bárbara
+          Soares pelo apoio e orientação.
+        </p>
+
         <div className="mt-4 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/40">
           <img
             src={fair.images[3].src}
