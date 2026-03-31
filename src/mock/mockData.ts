@@ -5,7 +5,7 @@ import modeling3dImg from '../assets/softwares/fusion-3d.svg'
 import ubuntuImg from '../assets/softwares/ubuntu.svg'
 import asteriskImg from '../assets/softwares/asterisk.svg'
 
-import groupPhotoImg from '../assets/people/grupo.svg'
+import groupPhotoImg from '../assets/people/foto turma com a prof.jpeg'
 import avatar01 from '../assets/people/avatar-01.svg'
 import avatar02 from '../assets/people/avatar-02.svg'
 import avatar03 from '../assets/people/avatar-03.svg'

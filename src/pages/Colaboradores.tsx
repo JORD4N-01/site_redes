@@ -2,6 +2,7 @@ import Page from '../components/Page'
 import { Link } from 'react-router-dom'
 
 import groupPhotoFallbackSrc from '../assets/people/grupo.svg'
+import groupPhotoSrc from '../assets/people/foto turma com a prof.jpeg'
 import instructorPhotoSrc from '../assets/people/Instrutor.png'
 import jamillisPhotoSrc from '../assets/people/foto_jamillis.jpeg'
 import jordanPhotoSrc from '../assets/people/jordan.jpeg'
@@ -9,8 +10,6 @@ import sauloPhotoSrc from '../assets/people/foto_sualo.jpeg'
 import manuPhotoSrc from '../assets/people/manu.jpeg'
 import thamyresPhotoSrc from '../assets/people/foto_Thamyres.jpeg'
 import carlosPhotoSrc from '../assets/people/foto_carlos.jpeg'
-
-const groupPhotoSrc = '/people/foto-turma-com-prof.jpg'
 
 type CollaboratorRole = 'Aluno' | 'Professor' | 'Instrutor' | 'Instrutora'
 
