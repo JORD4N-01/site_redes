@@ -45,8 +45,7 @@ export default function Home() {
             </a>
 
             <p className="mt-2 text-[10px] text-slate-400">
-              Imagem mock — troque em{' '}
-              <span className="font-medium text-sky-300">src/mock/mockData.ts</span>
+              Imagem do projeto.
             </p>
           </div>
         </div>

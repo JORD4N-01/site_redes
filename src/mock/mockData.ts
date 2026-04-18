@@ -5,7 +5,7 @@ import modeling3dImg from '../assets/softwares/fusion-3d.svg'
 import ubuntuImg from '../assets/softwares/ubuntu.svg'
 import asteriskImg from '../assets/softwares/asterisk.svg'
 
-import groupPhotoImg from '../assets/people/grupo.svg'
+import groupPhotoImg from '../assets/people/foto turma com a prof.jpeg'
 import avatar01 from '../assets/people/avatar-01.svg'
 import avatar02 from '../assets/people/avatar-02.svg'
 import avatar03 from '../assets/people/avatar-03.svg'
@@ -14,7 +14,7 @@ import avatar05 from '../assets/people/avatar-05.svg'
 import avatar06 from '../assets/people/avatar-06.svg'
 
 import logicalDiagramImg from '../assets/project/planta-logica-packettracer.svg'
-import projectHeroImg from '../assets/project/hero-projeto.svg'
+import projectHeroImg from '../assets/project/engenheiro-de-miniatura.jpg'
 
 import fairImg01 from '../assets/fair/feira-01.svg'
 import fairImg02 from '../assets/fair/feira-02.svg'
@@ -128,7 +128,7 @@ export const mockData: SiteData = {
   },
   home: {
     projectHeroImageSrc: projectHeroImg,
-    projectHeroAlt: 'Imagem representativa do projeto (mock)',
+    projectHeroAlt: 'Imagem representativa do projeto',
   },
   fair: {
     title: '5ª Semana Nacional da Educação Profissional e Tecnológica: “Juventudes que Inovam, Brasil que Avança”',
