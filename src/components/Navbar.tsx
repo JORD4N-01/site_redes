@@ -37,29 +37,39 @@ export default function Navbar() {
         <button
           type="button"
           className="inline-flex rounded-md border border-slate-700 px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60 md:hidden"
-          aria-label="Abrir menu de navegação"
+          aria-label={isMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-nav"
           onClick={() => setIsMenuOpen((state) => !state)}
         >
           Menu
         </button>
 
-        <nav
-          className={`w-full flex-col items-stretch gap-1 border-t border-slate-800 pt-3 md:w-auto md:flex-row md:items-center md:border-0 md:pt-0 ${
-            isMenuOpen ? 'flex' : 'hidden md:flex'
-          }`}
-        >
+        <nav className="hidden w-auto flex-row items-center gap-1 md:flex">
           {sections.map((section) => (
-            <a
-              key={section.href}
-              href={section.href}
-              className={linkBase}
-              onClick={closeMenu}
-            >
+            <a key={section.href} href={section.href} className={linkBase}>
               {section.label}
             </a>
           ))}
         </nav>
+
+        {isMenuOpen ? (
+          <nav
+            id="mobile-nav"
+            className="flex w-full flex-col items-stretch gap-1 border-t border-slate-800 pt-3 md:hidden"
+          >
+            {sections.map((section) => (
+              <a
+                key={section.href}
+                href={section.href}
+                className={linkBase}
+                onClick={closeMenu}
+              >
+                {section.label}
+              </a>
+            ))}
+          </nav>
+        ) : null}
       </div>
     </header>
   )
