@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply antialiased;
+    @apply scroll-smooth antialiased;
   }
 
   body {
@@ -13,5 +13,11 @@
 
   ::selection {
     @apply bg-sky-500/30;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
